@@ -21,6 +21,9 @@ Test APIGW from the CLI:
 
 ```$ curl https://s5dmXXXXXX.execute-api.us-west-2.amazonaws.com/test```
 
-Manually remove S3 object before destroying via Terraform
+Manually remove S3 bucket/object before destroying via Terraform
 
-```$ aws s3 rm s3://lambda-arifiacts-XXXXX/v1.0.0/demo.zip```
+```
+$ aws s3 rm s3://lambda-arifiacts-XXXXX/v1.0.0/demo.zip
+$ aws s3 rb s3://lambda-arifiacts-XXXXX
+```
